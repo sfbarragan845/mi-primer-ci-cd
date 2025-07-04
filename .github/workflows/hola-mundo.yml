@@ -1,0 +1,29 @@
+name: Mi primer CI/CD
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  saludar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar codigo
+        uses: actions/checkout@v4
+
+      - name: Hola mundo DevOps
+        run: |
+          echo "Hola DevOps con Roxs"
+          date
+          uname -a
+
+      - name: Test Matematico
+        run: |
+          if [ $((2 + 2)) -eq 4 ]; then
+            echo "La suma es correcta"
+          else
+            echo "La suma es incorrecta"
+            exit 1
+          fi
