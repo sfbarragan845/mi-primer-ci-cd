@@ -2,7 +2,7 @@ name: Variables DevOps
 on: [push, workflow_dispatch]
 
 env:
-  PROYECTO: "Mi App DevIps"
+  PROYECTO: "Mi App DevOps"
   AMBIENTE: "Desarrollo"
 
 jobs:
